@@ -1,0 +1,141 @@
+# Gradle files
+.gradle/
+build/
+.gradletasknamecache
+
+# Local configuration file (sdk path, etc)
+local.properties
+
+# Android Studio generated files
+*.iml
+*.iws
+*.ipr
+.idea/
+.idea/caches/
+.idea/libraries/
+.idea/modules.xml
+.idea/modules/
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/gradle.xml
+.idea/dictionaries
+.idea/vcs.xml
+.idea/jsLibraryMappings.xml
+.idea/projectCodeStyle.xml
+.idea/misc.xml
+.idea/runConfigurations.xml
+.idea/navEditor.xml
+.idea/assetWizardSettings.xml
+.idea/inspectionProfiles/
+.idea/.name
+.idea/encodings.xml
+.idea/compiler.xml
+
+# Android Studio Kotlin Gradle IDE Plugin
+.idea/kotlinc.xml
+
+# Android Profiler
+captures/
+
+# Intellij
+*.log
+*.swp
+*.swo
+
+# Build artifacts
+apk/
+bin/
+gen/
+lint.xml
+local.properties
+proguard/
+proguard.cfg
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+
+# Android NDK
+obj/
+.cxx/
+.externalNativeBuild/
+
+# Gradle wrapper
+gradle/wrapper/gradle-wrapper.jar
+
+# Mac bundle stuff
+*.dmg
+*.app
+
+# Misc
+/build/
+/captures
+.externalNativeBuild
+.cxx
+
+# Keystore files
+*.jks
+*.keystore
+
+# Google Services (e.g. APIs or Firebase)
+google-services.json
+
+# Freeline
+freeline.py
+freeline/
+freeline_files/
+
+# fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots
+fastlane/test_output
+fastlane/readme.md
+
+# Version control
+.svn/
+
+# User-specific configurations
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# Temporary files
+*~
+*.tmp
+*.bak
+*.swp
+*#
+.#*
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Local env files
+.env
+.env.local
+.env.*.local
+
+# Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+
+# Lint reports
+lint-results.xml
+lint-results-*.xml
