@@ -2,46 +2,40 @@ package com.app.noisemap.core.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle
-import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
 
-val Typography = Typography(
-    displayLarge = TextStyle(
-        fontFamily = FontFamily.Default, // Replace with Clash Display if available
-        fontSize = 57.sp,
-        fontWeight = FontWeight.Bold
-    ),
-    displayMedium = TextStyle(
-        fontFamily = FontFamily.Default,
-        fontSize = 45.sp,
-        fontWeight = FontWeight.Bold
-    ),
+val NoisemapTypography = Typography(
     headlineLarge = TextStyle(
-        fontFamily = FontFamily.Default,
-        fontSize = 32.sp,
-        fontWeight = FontWeight.SemiBold
+        fontSize = 24.sp, fontWeight = FontWeight.Bold,
+        color = NoisemapColors.TextPrimary, letterSpacing = (-0.5).sp,
     ),
     headlineMedium = TextStyle(
-        fontFamily = FontFamily.Default,
-        fontSize = 28.sp,
-        fontWeight = FontWeight.SemiBold
+        fontSize = 20.sp, fontWeight = FontWeight.Bold,
+        color = NoisemapColors.TextPrimary,
     ),
-    titleLarge = TextStyle(
-        fontFamily = FontFamily.Default, // Replace with DM Sans if available
-        fontSize = 22.sp,
-        fontWeight = FontWeight.SemiBold
+    titleMedium = TextStyle(
+        fontSize = 11.sp, fontWeight = FontWeight.SemiBold,
+        color = NoisemapColors.TextSecondary, letterSpacing = 0.8.sp,
+    ),
+    displayLarge = TextStyle(
+        fontSize = 36.sp, fontWeight = FontWeight.ExtraBold,
+        color = NoisemapColors.TextPrimary, letterSpacing = (-1).sp,
+    ),
+    displayMedium = TextStyle(
+        fontSize = 22.sp, fontWeight = FontWeight.Bold,
+        color = NoisemapColors.TextPrimary,
     ),
     bodyLarge = TextStyle(
-        fontFamily = FontFamily.Default,
-        fontSize = 16.sp
+        fontSize = 14.sp, fontWeight = FontWeight.Medium,
+        color = NoisemapColors.TextPrimary,
     ),
     bodyMedium = TextStyle(
-        fontFamily = FontFamily.Default,
-        fontSize = 14.sp
+        fontSize = 13.sp, fontWeight = FontWeight.Normal,
+        color = NoisemapColors.TextSecondary, lineHeight = 19.sp,
     ),
     labelSmall = TextStyle(
-        fontFamily = FontFamily.Monospace, // Replace with JetBrains Mono if available
-        fontSize = 11.sp
+        fontSize = 11.sp, fontWeight = FontWeight.Normal,
+        color = NoisemapColors.TextMuted, letterSpacing = 0.2.sp,
     ),
 )

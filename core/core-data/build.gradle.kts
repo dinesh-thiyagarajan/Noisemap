@@ -38,6 +38,11 @@ dependencies {
     implementation(libs.room.ktx)
     ksp(libs.room.compiler)
 
+    // Firebase — implementation lives here; version pinned by BOM declared in :app
+    implementation(platform(libs.firebase.bom))
+    implementation(libs.firebase.analytics)
+    implementation(libs.firebase.crashlytics)
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
 }

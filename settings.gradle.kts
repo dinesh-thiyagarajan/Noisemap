@@ -16,10 +16,11 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        maven { url = uri("https://jitpack.io") }
     }
 }
 
-rootProject.name = "Notifiq"
+rootProject.name = "Noisemap"
 include(":app")
 
 // Core Modules
@@ -28,13 +29,13 @@ include(":core:core-domain")
 include(":core:core-data")
 include(":core:core-common")
 
-// Service Module
-include(":service:notification-service")
+// Feature modules — flat, same level as :app
+include(":feature-onboarding")
+include(":feature-dashboard")
+include(":feature-appdetail")
+include(":feature-timeline")
+include(":feature-insights")
+include(":feature-about")
 
-// Feature Modules
-include(":feature:feature-onboarding")
-include(":feature:feature-dashboard")
-include(":feature:feature-appdetail")
-include(":feature:feature-timeline")
-include(":feature:feature-insights")
-include(":feature:feature-about")
+// Service module — flat, same level as :app
+include(":notification-service")

@@ -5,6 +5,8 @@ plugins {
     alias(libs.plugins.hilt)
     alias(libs.plugins.ksp)
     alias(libs.plugins.kotlin.serialization)
+    alias(libs.plugins.google.services)
+    alias(libs.plugins.firebase.crashlytics)
 }
 
 android {
@@ -48,14 +50,14 @@ dependencies {
     implementation(project(":core:core-data"))
     implementation(project(":core:core-common"))
     
-    implementation(project(":feature:feature-onboarding"))
-    implementation(project(":feature:feature-dashboard"))
-    implementation(project(":feature:feature-appdetail"))
-    implementation(project(":feature:feature-timeline"))
-    implementation(project(":feature:feature-insights"))
-    implementation(project(":feature:feature-about"))
-    
-    implementation(project(":service:notification-service"))
+    implementation(project(":feature-onboarding"))
+    implementation(project(":feature-dashboard"))
+    implementation(project(":feature-appdetail"))
+    implementation(project(":feature-timeline"))
+    implementation(project(":feature-insights"))
+    implementation(project(":feature-about"))
+
+    implementation(project(":notification-service"))
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
@@ -71,6 +73,11 @@ dependencies {
     implementation(libs.hilt.android)
     ksp(libs.hilt.compiler)
     implementation(libs.hilt.navigation.compose)
+
+    // Firebase — version managed by BOM; google-services.json required in app/
+    implementation(platform(libs.firebase.bom))
+    implementation(libs.firebase.analytics)
+    implementation(libs.firebase.crashlytics)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

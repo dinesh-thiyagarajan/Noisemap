@@ -9,36 +9,34 @@ import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalView
 import androidx.core.view.WindowCompat
 
-private val DarkColorScheme = darkColorScheme(
-    primary = ColorAccentTeal,
-    secondary = ColorAccentAmber,
-    tertiary = ColorAccentGreen,
-    background = ColorBackground,
-    surface = ColorSurface,
-    onPrimary = ColorBackground,
-    onSecondary = ColorBackground,
-    onTertiary = ColorBackground,
-    onBackground = ColorTextPrimary,
-    onSurface = ColorTextPrimary,
-    error = ColorAccentRed
+private val NoisemapDarkColorScheme = darkColorScheme(
+    background        = NoisemapColors.Background,
+    surface           = NoisemapColors.Surface,
+    surfaceVariant    = NoisemapColors.SurfaceElevated,
+    primary           = NoisemapColors.AccentTeal,
+    secondary         = NoisemapColors.AccentGreen,
+    error             = NoisemapColors.AccentRed,
+    onBackground      = NoisemapColors.TextPrimary,
+    onSurface         = NoisemapColors.TextPrimary,
+    onPrimary         = NoisemapColors.Background,
+    outline           = NoisemapColors.BorderDefault,
 )
 
 @Composable
-fun NoisemapTheme(
-    content: @Composable () -> Unit
-) {
+fun NoisemapTheme(content: @Composable () -> Unit) {
     val view = LocalView.current
     if (!view.isInEditMode) {
         SideEffect {
             val window = (view.context as Activity).window
-            window.statusBarColor = ColorBackground.toArgb()
+            window.statusBarColor = NoisemapColors.Background.toArgb()
             WindowCompat.getInsetsController(window, view).isAppearanceLightStatusBars = false
         }
     }
 
     MaterialTheme(
-        colorScheme = DarkColorScheme,
-        typography = Typography,
-        content = content
+        colorScheme = NoisemapDarkColorScheme,
+        typography = NoisemapTypography,
+        shapes = NoisemapShapes,
+        content = content,
     )
 }
