@@ -122,13 +122,13 @@ private fun DashboardContent(
 
     LazyColumn(
         modifier = Modifier.fillMaxSize(),
-        contentPadding = PaddingValues(horizontal = 16.dp, vertical = 12.dp),
+        contentPadding = PaddingValues(start = 16.dp, top = 4.dp, end = 16.dp, bottom = 16.dp),
         verticalArrangement = Arrangement.spacedBy(10.dp),
     ) {
         // Page header
         item {
             AnimatedListItem(0) {
-                Column(modifier = Modifier.padding(top = 4.dp, bottom = 2.dp)) {
+                Column(modifier = Modifier.padding(bottom = 2.dp)) {
                     Text(
                         text = "Today",
                         style = MaterialTheme.typography.headlineLarge,
